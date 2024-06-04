@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import logo from './assets/images/logo-universal.png'
   import {Greet} from '../wailsjs/go/main/App.js'
 
@@ -76,4 +76,4 @@
     background-color: rgba(255, 255, 255, 1);
   }
 
-</style>
+</style> -->
