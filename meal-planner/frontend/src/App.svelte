@@ -1,25 +1,40 @@
-<!-- <script>
-  import logo from './assets/images/logo-universal.png'
-  import {Greet} from '../wailsjs/go/main/App.js'
+<script>
+  import {Data} from '../wailsjs/go/main/App.js'
+  import {GetMeal} from '../wailsjs/go/main/App.js'
 
-  let resultText = "Please enter your name below 👇"
-  let name
+  let resultText = "Get the Data"
+  let dataBody = ""
+  
 
-  function greet() {
-    Greet(name).then(result => resultText = result)
+  function init() {
+    getMeal();
+  }
+
+  init();
+
+  function data() {
+    Data().then(result => resultText = result)
+  }
+
+  function getMeal() {
+    GetMeal().then((result) => (dataBody = result) )
   }
 </script>
 
-<main>
+<!-- <main>
   <img alt="Wails logo" id="logo" src="{logo}">
   <div class="result" id="result">{resultText}</div>
   <div class="input-box" id="input">
     <input autocomplete="off" bind:value={name} class="input" id="name" type="text"/>
     <button class="btn" on:click={greet}>Greet</button>
   </div>
+</main> -->
+<main>
+  <div class="result" id="result">{resultText}</div>
+  <button class="btn" on:click={data}>data</button>
+  <div class="data">{dataBody}</div>
 </main>
-
-<style>
+<!-- <style>
 
   #logo {
     display: block;
